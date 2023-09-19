@@ -3,3 +3,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.main_carrousel {
+    width: 100%;
+    max-width: 910px;
+    margin: 0 auto;
+}
+
+
+.inner {
+    display: flex
+}
+
+.item {
+    min-height: 500px;
+    min-width: 500px;
+    padding: 1rem;
+}
+
+.item img {
+    width: 100%;
+    height: 90%;
+    border-radius: 12px;
+    pointer-events: none;
+}
+
+.caroussel {
+    cursor: grab;
+    overflow: hidden;
+}

@@ -11,14 +11,35 @@ const ProductProvider = ({ children }) => {
   // Estado dos Produtos
   const [products, setProducts] = useState([])
 
-  // Fetch dos produtos
+  // Fetch dos produtos ( buscar os produtos a uma api)
   useEffect(() => {
+
+    try {
+
+      const fetchProducts = async () => {
+
+        const response = await fetch('https://fakestoreapi.com/products')
+        const data = await response.json()
+        setProducts(data)
+
+
+
+      }
+
+      fetchProducts()
+
+    } catch (error) {
+      console.log("Deu o seguinte erro: ", error)
+    }
+
 
   }, [])
 
+
+
   return (
 
-    <ProductContext.Provider>
+    <ProductContext.Provider value={{ products }}> {children}
 
 
 
@@ -26,4 +47,4 @@ const ProductProvider = ({ children }) => {
   )
 }
 
-export default ProductContext
+export default ProductProvider
