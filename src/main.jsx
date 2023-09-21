@@ -10,21 +10,29 @@ import ProductProvider from './contexts/ProductContext.jsx'
 // Importar o Provider (SideBar) )
 import SidebarProvider from './contexts/SidebarContext.jsx'
 
+//Importar o provider (Carrinho)
+
+import CartProvider from "./contexts/CartContext.jsx"
+
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
 
   <SidebarProvider>
 
-    <ProductProvider>
+    <CartProvider>
 
-      <React.StrictMode>
+      <ProductProvider>
 
-        <App />
+        <React.StrictMode>
 
-      </React.StrictMode>
+          <App />
 
-    </ProductProvider>
+        </React.StrictMode>
+
+      </ProductProvider>
+
+    </CartProvider>
 
   </SidebarProvider>
 
