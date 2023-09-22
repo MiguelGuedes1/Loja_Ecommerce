@@ -13,6 +13,7 @@ const Home = () => {
 
     // Filtrar apenas produtos relacionados a eletrônicos
     const filteredProducts = products.filter(item => item.category === "electronics")
+    console.log(filteredProducts)
 
 
 
@@ -28,6 +29,7 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+
         </div>
     );
 };
