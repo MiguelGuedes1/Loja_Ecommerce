@@ -10,10 +10,16 @@ const Home = () => {
 
     // Receber os produtos do ProductContext
     const { products } = useContext(ProductContext);
+    console.log(products)
 
     // Filtrar apenas produtos relacionados a eletrônicos
-    const filteredProducts = products.filter(item => item.category === "electronics")
-    console.log(filteredProducts)
+    const filteredProducts = products.filter(item =>
+        item.category === "men's clothing" ||
+        item.category === "jewelery" ||
+        item.category === "women's clothing"
+    );
+
+
 
 
 

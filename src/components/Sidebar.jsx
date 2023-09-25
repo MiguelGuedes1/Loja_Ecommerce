@@ -1,8 +1,5 @@
 import React, { useContext } from 'react'
 
-// Importar Link
-import { Link } from "react-router-dom"
-
 // Importar icons
 import { IoMdArrowForward } from "react-icons/io"
 import { FiTrash2 } from "react-icons/fi"
@@ -15,6 +12,9 @@ import { SidebarContext } from "../contexts/SidebarContext"
 
 //Importar Carrinho Context
 import { CartContext } from "../contexts/CartContext"
+
+//importar logo
+import { logo } from '../assets';
 
 const Sidebar = () => {
 
@@ -32,17 +32,19 @@ const Sidebar = () => {
 
       <div className='flex items-center justify-between py-6 border-b'>
 
-        <div className='uppercase text-sm font-semi-bold'>
-          Shopping Bag(0)
+        <div>
+          <img className='logo_sidebar' src={logo} alt="logo" />
         </div>
+
+
 
 
 
         <div
           onClick={handleClose}
-          className='cursor-pointer w-8 h-8 flex justify-center items-center'
+          className='cursor-pointer w-8 h-8 flex justify-end items-center'
         >
-          <IoMdArrowForward className='text-2xl' />
+          <IoMdArrowForward className='text-2xl flex justify-end' />
         </div>
 
 

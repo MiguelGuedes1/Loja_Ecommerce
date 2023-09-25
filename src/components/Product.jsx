@@ -6,7 +6,7 @@ import React, { useContext } from 'react'
 import { Link } from "react-router-dom"
 
 //Importar Icons
-import { BsPlus, BsEyeFill } from "react-icons/bs"
+import { BsPlus } from "react-icons/bs"
 
 // Importar Contexto do carrinho
 import { CartContext } from "../contexts/CartContext.jsx"
@@ -38,7 +38,9 @@ const Product = ({ product }) => {
           </div>
 
 
-          <div className='absolute top-30 -right-11 group-hover:right-5  p-2 flex gap-3 mb-20 items-center justify-center gap-y-2 opacity-0 group-hover:opacity-100 transition-all duration-300'>
+          <div className='absolute top-30 -left-11 group-hover:left-8  p-2 flex gap-3 mb-20 items-center justify-center gap-y-2 opacity-0 group-hover:opacity-100 transition-all duration-300'>
+
+
             <button onClick={() => addToCart(product, id)}>
 
               <div className='flex justify-center items-center text-white w-10 h-10 bg-green-500'>
@@ -47,11 +49,7 @@ const Product = ({ product }) => {
 
             </button>
 
-            <Link to={`/product/${id}`}
-              className='w-10 h-10 bg-white flex justify-center items-center text-primary drop-shadow-xl'
-            >
-              <BsEyeFill />
-            </Link>
+
           </div>
 
 
