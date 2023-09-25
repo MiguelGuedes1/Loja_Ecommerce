@@ -18,7 +18,7 @@ const Product = ({ product }) => {
   const { addToCart } = useContext(CartContext)
 
 
-  const { id, image, category, title, price } = product
+  const { id, image, title, price } = product
 
 
 
@@ -60,9 +60,9 @@ const Product = ({ product }) => {
 
       <div>
 
-        <Link to={`/product/${id}`}>
+        <p>
           <h2 className='font-semibold mb-1'>{title}</h2>
-        </Link>
+        </p>
 
         <h2 className='font-semibold'> € {price} </h2>
 

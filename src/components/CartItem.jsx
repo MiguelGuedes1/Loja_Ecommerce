@@ -45,22 +45,22 @@ const CartItem = ({ item }) => {
     <div className='border-b border-gray-200 py-5'>
       <div className='w-full min-h-[150px] flex items-center gap-x-4'>
 
-        <Link to={`/product/${id}`}>
+        <p to={`/product/${id}`}>
 
           <img className='max-w-[60px]' src={item.image} alt="imagem_produto" />
 
-        </Link>
+        </p>
 
         <div className='flex justify-between mb-2 gap-10'>
 
 
-          <Link to={`/product/${id}`}
-            className='text-xs uppercase font-medium max-w-[240px] text-primary hover:underline'
+          <p to={`/product/${id}`}
+            className='text-xs uppercase font-medium max-w-[240px] text-primary'
           >
 
             {title}
 
-          </Link>
+          </p>
 
           <div
             onClick={() => removeFromCart(id)}
